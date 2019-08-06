@@ -48,14 +48,14 @@ public class ClientHandler {
                 if(file.exists()){
                     int fileLength = (int) file.length();
                     byte[] fileData = fileDataReader.readFileData(file, fileLength);
-                    httpHeader.getHttpHeaderWithDataToClient(outputStream, fileLength, fileData);
+                    httpHeader.getHttpHeaderWithDataToClient(outputStream, fileRequested, fileLength, fileData);
                 }
                 else {
                     File notFoundFile = new File(FILE_NOT_FOUND);
                     int fileLength = (int) notFoundFile.length();
                     byte[] fileData = fileDataReader.readFileData(notFoundFile, fileLength);
 
-                    httpHeader.getHttpHeaderWithDataToClient(outputStream, fileLength, fileData);
+                    httpHeader.getHttpHeaderWithDataToClient(outputStream, fileRequested, fileLength, fileData);
                 }
             }
             inputStream.close();
