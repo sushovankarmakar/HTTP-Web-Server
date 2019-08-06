@@ -24,6 +24,27 @@ public class FileHandleTest {
         }catch (Exception e){
             e.printStackTrace();
         }
-
     }
+
+    @Test
+    public void isFileExtensionToContentTypeMapperTest () {
+
+        assertEquals("text/plain", FileExtensionToContentTypeMapper.getFileContentType("sushovan.txt"));
+        assertEquals("text/html", FileExtensionToContentTypeMapper.getFileContentType("sushovan.html"));
+        assertEquals("text", FileExtensionToContentTypeMapper.getFileContentType("sushovan.jpg"));
+        assertEquals("text", FileExtensionToContentTypeMapper.getFileContentType("sushovan.png"));
+    }
+
+    @Test
+    public void isExtractFileNameAndMethodNameTest (){
+        Parser parser = new Parser();
+        parser.parse(("GET /sushovan.txt HTTP/1.1").getBytes());
+        String expectedFileName = "sushovan.txt";
+        String expectedMethodName = "GET";
+        String actualFileName = parser.fileRequested;
+        String actualMethodName = parser.methodName;
+        assertEquals(expectedFileName, actualFileName);
+        assertEquals(expectedMethodName,actualMethodName);
+    }
+
 }

@@ -17,7 +17,6 @@ public class ClientHandler {
         {
             LogWriter logWriter = new LogWriter("LogMessage/LogMsg.txt");
             logWriter.logger.setLevel(Level.ALL);
-            logWriter.logger.info("Info msg");
 
             inputStream = new BufferedInputStream(socket.getInputStream());
             outputStream = new BufferedOutputStream(socket.getOutputStream());
@@ -43,6 +42,8 @@ public class ClientHandler {
             FileDataReader fileDataReader = new FileDataReader();
             if(methodName.equals("GET"))
             {
+                logWriter.logger.info("GET method");
+
                 File file = new File(fileRequested);
 
                 if(file.exists()){

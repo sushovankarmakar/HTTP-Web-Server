@@ -1,6 +1,7 @@
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.logging.Level;
 
 public class HttpWebServer implements Runnable {
 
@@ -11,8 +12,15 @@ public class HttpWebServer implements Runnable {
     HttpWebServer(int port){
         try{
             server = new ServerSocket(port);
-            System.out.println("Server has started.");
-            System.out.println("Server is listening at port 8080.");
+
+            LogWriter logWriter = new LogWriter("LogMessage/LogMsg.txt");
+            logWriter.logger.setLevel(Level.ALL);
+
+            //System.out.println("Server has started.");
+            //System.out.println("Server is listening at port 8080.");
+            logWriter.logger.info("Server has started.");
+            logWriter.logger.info("Server is listening at port 8080");
+
             ClientHandler clientHandler = new ClientHandler();
 
             while(isAcceptingMoreClient ){

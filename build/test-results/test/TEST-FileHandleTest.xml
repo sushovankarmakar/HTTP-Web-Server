@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FileHandleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-06T06:57:48" hostname="RENTLAPT0021" time="0.008">
+<testsuite name="FileHandleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-08-06T11:35:48" hostname="RENTLAPT0021" time="0.096">
   <properties/>
-  <testcase name="isReadFileDataReadingDataTest" classname="FileHandleTest" time="0.008"/>
+  <testcase name="isFileExtensionToContentTypeMapperTest" classname="FileHandleTest" time="0.006"/>
+  <testcase name="isReadFileDataReadingDataTest" classname="FileHandleTest" time="0.004"/>
+  <testcase name="isExtractFileNameAndMethodNameTest" classname="FileHandleTest" time="0.086"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[Aug 06, 2019 5:05:48 PM LogWriter <init>
+INFO: My first log message
+Aug 06, 2019 5:05:48 PM LogWriter <init>
+INFO: Another Message
+Aug 06, 2019 5:05:48 PM Parser parse
+INFO: Method is  GET
+Aug 06, 2019 5:05:48 PM Parser parse
+INFO: File is sushovan.txt
+]]></system-err>
 </testsuite>

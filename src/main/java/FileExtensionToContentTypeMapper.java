@@ -3,9 +3,9 @@ import java.util.HashMap;
 public class FileExtensionToContentTypeMapper {
     public static HashMap<String, String> fileContentTypeExtensionMap = new HashMap<String, String>(){{
         put("txt", "text/plain");
-        put("html","text/html");
+        put("html", "text/html");
         put("jpg", "text");
-        put("png","text");
+        put("png", "text");
     }};
 
     public static String getFileContentType(String fileName){
