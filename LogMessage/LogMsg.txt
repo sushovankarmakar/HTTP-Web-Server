@@ -224,3 +224,81 @@ Aug 06, 2019 5:05:48 PM Parser parse
 INFO: Method is  GET
 Aug 06, 2019 5:05:48 PM Parser parse
 INFO: File is sushovan.txt
+Aug 06, 2019 6:27:06 PM LogWriter logWrite
+INFO: Server has started
+Aug 06, 2019 6:27:06 PM LogWriter logWrite
+INFO: Server is listening at port 8080
+Aug 06, 2019 6:27:17 PM LogWriter logWrite
+INFO: Client accepted
+Aug 06, 2019 6:27:17 PM LogWriter logWrite
+INFO: Method is  GET
+Aug 06, 2019 6:27:17 PM LogWriter logWrite
+INFO: File is hello.txt
+Aug 06, 2019 6:27:17 PM LogWriter logWrite
+INFO: GET method
+Aug 06, 2019 6:27:21 PM LogWriter logWrite
+INFO: Client accepted
+Aug 06, 2019 6:27:21 PM LogWriter logWrite
+INFO: Method is  GET
+Aug 06, 2019 6:27:21 PM LogWriter logWrite
+INFO: File is hello.txt
+Aug 06, 2019 6:27:21 PM LogWriter logWrite
+INFO: GET method
+Aug 06, 2019 6:27:27 PM LogWriter logWrite
+INFO: Client accepted
+Aug 06, 2019 6:27:27 PM LogWriter logWrite
+INFO: Method is  GET
+Aug 06, 2019 6:27:27 PM LogWriter logWrite
+INFO: File is tavisca.png
+Aug 06, 2019 6:27:27 PM LogWriter logWrite
+INFO: GET method
+Aug 06, 2019 6:27:28 PM LogWriter logWrite
+INFO: Client accepted
+Aug 06, 2019 6:27:42 PM LogWriter logWrite
+INFO: Client accepted
+Aug 06, 2019 6:27:42 PM LogWriter logWrite
+INFO: Method is  GET
+Aug 06, 2019 6:27:42 PM LogWriter logWrite
+INFO: File is favicon.ico
+Aug 06, 2019 6:27:42 PM LogWriter logWrite
+INFO: GET method
+Aug 06, 2019 6:27:43 PM LogWriter logWrite
+INFO: Client accepted
+Aug 06, 2019 6:27:43 PM LogWriter logWrite
+INFO: Method is  GET
+Aug 06, 2019 6:27:43 PM LogWriter logWrite
+INFO: File is hello.txt
+Aug 06, 2019 6:27:43 PM LogWriter logWrite
+INFO: GET method
+Aug 06, 2019 6:27:46 PM LogWriter logWrite
+INFO: Client accepted
+Aug 06, 2019 6:27:46 PM LogWriter logWrite
+INFO: Method is  GET
+Aug 06, 2019 6:27:46 PM LogWriter logWrite
+INFO: File is hel.txt
+Aug 06, 2019 6:27:46 PM LogWriter logWrite
+INFO: GET method
+Aug 06, 2019 6:27:49 PM LogWriter logWrite
+INFO: Client accepted
+Aug 06, 2019 6:27:49 PM LogWriter logWrite
+INFO: Method is  GET
+Aug 06, 2019 6:27:49 PM LogWriter logWrite
+INFO: File is favicon.ico
+Aug 06, 2019 6:27:49 PM LogWriter logWrite
+INFO: GET method
+Aug 06, 2019 6:27:54 PM LogWriter logWrite
+INFO: Client accepted
+Aug 06, 2019 6:27:54 PM LogWriter logWrite
+INFO: Method is  GET
+Aug 06, 2019 6:27:54 PM LogWriter logWrite
+INFO: File is hello.html
+Aug 06, 2019 6:27:54 PM LogWriter logWrite
+INFO: GET method
+Aug 06, 2019 6:28:14 PM LogWriter logWrite
+INFO: Client accepted
+Aug 06, 2019 6:28:14 PM LogWriter logWrite
+INFO: Method is  GET
+Aug 06, 2019 6:28:14 PM LogWriter logWrite
+INFO: File is favicon.ico
+Aug 06, 2019 6:28:14 PM LogWriter logWrite
+INFO: GET method
