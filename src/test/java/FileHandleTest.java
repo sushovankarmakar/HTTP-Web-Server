@@ -46,5 +46,4 @@ public class FileHandleTest {
         assertEquals(expectedFileName, actualFileName);
         assertEquals(expectedMethodName,actualMethodName);
     }
-
 }

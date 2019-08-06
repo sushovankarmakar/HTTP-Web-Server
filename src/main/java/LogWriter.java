@@ -1,26 +1,29 @@
 import java.io.File;
-import java.io.IOException;
 import java.util.logging.*;
 
 public class LogWriter {
     public static LogManager lm;
     public static Logger logger;
-    FileHandler fileHandler;
+    public static FileHandler fileHandler;
+    public static String fileName = "LogMessage/LogMsg.txt";
 
-    LogWriter(String fileName) throws IOException{
-        File logFile = new File(fileName);
-        if(!logFile.exists()){
-            logFile.createNewFile();
+    static void logWrite(String message) {
+
+        try{
+            File logFile = new File(fileName);
+            if(!logFile.exists()){
+                logFile.createNewFile();
+            }
+
+            logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+            fileHandler = new FileHandler(fileName,true);
+            fileHandler.setFormatter(new SimpleFormatter());
+            logger.addHandler(fileHandler);
+            logger.log(Level.INFO, message);
+            fileHandler.close();
+
+        } catch (Exception e){
+            e.printStackTrace();
         }
-
-        fileHandler = new FileHandler(fileName,true);
-        lm = LogManager.getLogManager();
-        logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-        logger.setLevel(Level.INFO);
-        logger.log(Level.INFO, "My first log message");
-        logger.log(Level.INFO, "Another Message");
-        logger.addHandler(fileHandler);
-        SimpleFormatter simpleFormatter = new SimpleFormatter();
-        fileHandler.setFormatter(simpleFormatter);
     }
 }

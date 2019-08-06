@@ -7,22 +7,16 @@ import java.util.logging.Level;
 
 public class ClientHandler {
 
-    private static final String FILE_NOT_FOUND = "fileNotFound.txt";
-
     void handleClient(Socket socket) {
 
         BufferedInputStream inputStream = null;
         BufferedOutputStream outputStream = null;
         try
         {
-            LogWriter logWriter = new LogWriter("LogMessage/LogMsg.txt");
-            logWriter.logger.setLevel(Level.ALL);
-
             inputStream = new BufferedInputStream(socket.getInputStream());
             outputStream = new BufferedOutputStream(socket.getOutputStream());
 
-            //System.out.println("Client accepted");
-            logWriter.logger.info("Client accepted");
+            LogWriter.logWrite("Client accepted");
 
 
             byte[] data = new byte[/*inputStream.available()*/256];
@@ -42,22 +36,9 @@ public class ClientHandler {
             FileDataReader fileDataReader = new FileDataReader();
             if(methodName.equals("GET"))
             {
-                logWriter.logger.info("GET method");
-
-                File file = new File(fileRequested);
-
-                if(file.exists()){
-                    int fileLength = (int) file.length();
-                    byte[] fileData = fileDataReader.readFileData(file, fileLength);
-                    httpHeader.getHttpHeaderWithDataToClient(outputStream, fileRequested, fileLength, fileData);
-                }
-                else {
-                    File notFoundFile = new File(FILE_NOT_FOUND);
-                    int fileLength = (int) notFoundFile.length();
-                    byte[] fileData = fileDataReader.readFileData(notFoundFile, fileLength);
-
-                    httpHeader.getHttpHeaderWithDataToClient(outputStream, fileRequested, fileLength, fileData);
-                }
+                LogWriter.logWrite("GET method");
+                GETMethodHandler getMethodHandler = new GETMethodHandler();
+                getMethodHandler.handler(fileRequested, outputStream, httpHeader);
             }
             inputStream.close();
             outputStream.close();

@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.util.Date;
 
 public class HttpHeader {
-    void getHttpHeaderWithDataToClient(BufferedOutputStream outputStream, String fileNamme,
+    void getHttpHeaderWithDataToClient(BufferedOutputStream outputStream, String fileName,
                                        int fileLength, byte[] fileData)
     {
         try{
@@ -11,7 +11,7 @@ public class HttpHeader {
             outputStream.write(("\nServer: Java HTTP Server : 1.0").getBytes());
             outputStream.write(("\nDate: "+new Date()).getBytes());
             outputStream.write(("\nContent-type: "+
-                    FileExtensionToContentTypeMapper.getFileContentType(fileNamme)).getBytes());
+                    FileExtensionToContentTypeMapper.getFileContentType(fileName)).getBytes());
             outputStream.write(("\nContent-length: "+ fileLength).getBytes());
             outputStream.write(("\n\n").getBytes());
             outputStream.write(fileData,0,fileLength);
