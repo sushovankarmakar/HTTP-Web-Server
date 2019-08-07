@@ -33,7 +33,6 @@ public class ClientHandler {
             String fileRequested = parser.fileRequested;
 
             HttpHeader httpHeader = new HttpHeader();
-            FileDataReader fileDataReader = new FileDataReader();
             if(methodName.equals("GET"))
             {
                 LogWriter.logWrite("GET method");

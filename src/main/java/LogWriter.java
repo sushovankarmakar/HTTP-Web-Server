@@ -21,7 +21,6 @@ public class LogWriter {
             logger.addHandler(fileHandler);
             logger.log(Level.INFO, message);
             fileHandler.close();
-
         } catch (Exception e){
             e.printStackTrace();
         }
